@@ -28,12 +28,12 @@ sudo make install
 echo "Configuring and building Pangolin ..."
 
 cd ../..
-git clone https://github.com/stevenlovegrove/Pangolin.git
+
+git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
 cd Pangolin
-mkdir build
-cd build
-cmake ..
-make -j1
+./scripts/install_prerequisites.sh recommended
+cmake -B build
+cmake --build build
 sudo make install
 
 cd ../../../
