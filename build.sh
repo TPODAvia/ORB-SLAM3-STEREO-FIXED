@@ -34,6 +34,7 @@ cd Pangolin
 ./scripts/install_prerequisites.sh recommended
 cmake -B build
 cmake --build build
+cd build
 sudo make install
 
 cd ../../../
